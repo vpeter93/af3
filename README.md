@@ -8,12 +8,12 @@ Majd hozzuk létre a projektünk legfontosabb részeit: követelmények, Kompons
 <div><img src="3.png" ></div>
 <div><img src="4.png" ></div>
 A létrejött projekt részeket könnyedén átnevezhetjük, ha jobb egérrel kattintunk rájuk és a rename-re kattintunk. Legalábbis elméletben. Ez a követelmények résznél még működött, de a Component-Architecture-t sehogy sem engedte átnevezni, bármit is írtam be.<br>
-<h2>Követlmények</h2><br>
+<h2>Követelmények</h2><br>
 Most foglalkozzunk a követelmények résszel, hozzáadunk az előbb is működő jobb gombos módszerrel egy Glossaryt, Requirement Sources-t és egy Requirements-et.<br>
 <div><img src="5.png" ></div>
 Glossary Entry-k felvétele:<br>
 <div><img src="6.png" ></div>
-Át is nevezhetőek<br>
+Át is nevezhetőek a létrehozott dolgok.<br>
 Most töltsük meg a glossaryt tartalommal.<br>
 Kitöltjük a Controller definíciját<br>
 <div><img src="7.png" ></div>
@@ -22,9 +22,11 @@ A Traffic entry definícióját is kitöltjük<br>
 Ha minden igaz, akkor ezzel meg is vagyunk az entrykkel.<br>
 Most adjuk meg a requirement sources-nál a követelmények forrásait<br>
 A követelmények forrásai lehetnek:<br>
-•	érdekelt felektől (stakeholders)<br>
-•	külső rendszerekből (external system)<br>
-•	dokumentumokból (document)<br>
+<ul>
+    <li>érdekelt felektől (stakeholders)</li>
+    <li>külső rendszerekből (external system)</li>
+    <li>dokumentumokból (document)</li>
+</ul>
 <div><img src="9.png" ></div>
 Esetünkben három külső rendszer van:<br>
 •	gyalogos lámpa(pedestrian light)<br>
