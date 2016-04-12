@@ -2,7 +2,7 @@
 <h1 align="center">AutoFOCUS 3 traffic light example</h1><br>
 Nyissuk meg az autofocust<br>
 Kattintsunk a File-> New AF3-Project-ra<br>
-<div><img src="1.png" ></div>
+<div><img src="images/1.png" ></div>
 Majd hozzuk létre a projektünk legfontosabb részeit: követelmények, Komponsek és adatok<br>
 <div><img src="2.png" ></div>
 <div><img src="3.png" ></div>
