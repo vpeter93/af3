@@ -8,3 +8,20 @@ Majd hozzuk létre a projektünk legfontosabb részeit: követelmények, Kompons
 
 A létrejött projekt részeket könnyedén átnevezhetjük, ha jobb egérrel kattintunk rájuk és a rename-re kattintunk. Legalábbis elméletben. Ez a követelmények résznél még működött, de a Component-Architecture-t sehogy sem engedte átnevezni, bármit is írtam be.
 Most foglalkozzunk a követelmények résszel, hozzáadunk az előbb is működő jobb gombos módszerrel egy Glossaryt, Requirement Sources-t és egy Requirements-et.
+
+Glossary Entry-k felvétele:
+
+
+Át is nevezhetőek
+Most töltsük meg a glossaryt tartalommal.
+Kitöltjük a Controller definíciját
+
+
+A Traffic entry definícióját is kitöltjük
+
+Ha minden igaz, akkor ezzel meg is vagyunk az entrykkel.
+Most adjuk meg a requirement sources-nál a követelmények forrásait
+A követelmények forrásai lehetnek:
+•	érdekelt felektől (stakeholders)
+•	külső rendszerekből (external system)
+•	dokumentumokból (document)
