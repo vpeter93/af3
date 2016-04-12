@@ -25,3 +25,15 @@ A követelmények forrásai lehetnek:
 •	érdekelt felektől (stakeholders)
 •	külső rendszerekből (external system)
 •	dokumentumokból (document)
+
+Esetünkben három külső rendszer van:
+•	gyalogos lámpa(pedestrian light)
+•	kijelző(Indicator)
+•	közlekedési lámpa (traffic light)
+Az ISO 26262 szabvány adja a funkcionális követelményeinket, ezt document típussal vesszük fel.
+A general fülön el tudjuk nevezni és megadjuk a leírását
+
+A Files fülön akár csatolhatjuk is a dokumentumot, én most be fogom linkelni a szabványt:
+
+A leírását és a verzióját is megadhatjuk
+
