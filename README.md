@@ -76,13 +76,13 @@ Itt UML szekvencia diagramra hasonlító módon készíthetünk modellt. Itt ism
 A többi követelmény felvétele<br>
 
 
-Ezzel néhány apróságot eltekintve elkészültünk a követelményekkel, most térjünk át a Data dictionary-re.
-Adatszerkezetek és függvények hozzáadása (Data dictionary)
-A Data dictonary-be az oldalsó eszköztárról tudunk elemeket behúzni
+Ezzel néhány apróságot eltekintve elkészültünk a követelményekkel, most térjünk át a Data dictionary-re.<br>
+Adatszerkezetek és függvények hozzáadása (Data dictionary)<br>
+A Data dictonary-be az oldalsó eszköztárról tudunk elemeket behúzni<br>
 
-Nem is időzünk itt sokat, a Properties-ben lehet módosítani a függvények visszatérési értékét/paramétereit és minden egyebet. Figyelem a void kulcsszó itt nem használható. Csak visszatérési értékkel rendelkező, állapotváltozót nem módosító függvényeket hozhatunk létre.
+Nem is időzünk itt sokat, a Properties-ben lehet módosítani a függvények visszatérési értékét/paramétereit és minden egyebet. Figyelem a void kulcsszó itt nem használható. Csak visszatérési értékkel rendelkező, állapotváltozót nem módosító függvényeket hozhatunk létre.<br>
 
-Elkészítjük a modellt, ügyelünk a konzisztens elnevezésekre, hogy tudjunk mindenre hivatkozni.
-Miután a modell elkészült a use case-hez köthetünk egyes modellelemeket, ezt a use case beállításai között tehetjük meg:
+Elkészítjük a modellt, ügyelünk a konzisztens elnevezésekre, hogy tudjunk mindenre hivatkozni.<br>
+Miután a modell elkészült a use case-hez köthetünk egyes modellelemeket, ezt a use case beállításai között tehetjük meg:<br>
 
 
