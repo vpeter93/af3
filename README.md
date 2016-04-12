@@ -57,7 +57,7 @@ A követelmények:<br>
 Létrehozhatunk package-eket, hogy egységbe zárjunk egyes követelményeket. Megadhatunk use-case-eket is, amelyek felhasználói esetek<br>
 <div><img src="images/15.png" ></div>
 Létre is hozunk két package-et, egyet a követelményeknek, egyet a use case-eknek:<br>
-<div><img src="images/6.png" ></div>
+<div><img src="images/16.png" ></div>
 Először a Use Cases Package-ben dolgozzuk ki a use case-t<br>
 A use case tulajdonságainak nagy része egyszerűen beírható Az actor felvitelét mutatja az alábbi kép:<br>
 <div><img src="images/17.png" ></div>
