@@ -1,11 +1,11 @@
 # af3
-<h1>AutoFOCUS 3 traffic light example</h1>
-Nyissuk meg az autofocust
-Kattintsunk a File-> New AF3-Project-ra
+<h1>AutoFOCUS 3 traffic light example</h1><br>
+Nyissuk meg az autofocust<br>
+Kattintsunk a File-> New AF3-Project-ra<br>
 <div align="center">
   <img src="1.png" align="center">
 </div>
-Majd hozzuk létre a projektünk legfontosabb részeit: követelmények, Komponsek és adatok
+Majd hozzuk létre a projektünk legfontosabb részeit: követelmények, Komponsek és adatok<br>
 
 
 A létrejött projekt részeket könnyedén átnevezhetjük, ha jobb egérrel kattintunk rájuk és a rename-re kattintunk. Legalábbis elméletben. Ez a követelmények résznél még működött, de a Component-Architecture-t sehogy sem engedte átnevezni, bármit is írtam be.
