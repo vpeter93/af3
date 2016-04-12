@@ -29,9 +29,11 @@ A követelmények forrásai lehetnek:<br>
 </ul>
 <div><img src="9.png" ></div>
 Esetünkben három külső rendszer van:<br>
-•	gyalogos lámpa(pedestrian light)<br>
-•	kijelző(Indicator)<br>
-•	közlekedési lámpa (traffic light)<br>
+<ul>
+    <li>gyalogos lámpa(pedestrian light)</li>
+    <li>kijelző(Indicator)</li>
+    <li>közlekedési lámpa (traffic light)</li>
+</ul>
 Az ISO 26262 szabvány adja a funkcionális követelményeinket, ezt document típussal vesszük fel.<br>
 A general fülön el tudjuk nevezni és megadjuk a leírását<br>
 <div><img src="10.png" ></div>
@@ -42,8 +44,10 @@ A leírását és a verzióját is megadhatjuk<br>
 Mivel a szabvány három részben van fent a weben, ezért mindhárom linket megadjuk:<br>
 A link utólag is szerkeszthető, viszont akkor írhatjuk újra a description és a version részt is, mert a program automatán<br> kitörli ezeket.<br>
 Most következzenek az érdekelt felek:<br>
-•	A gyalogosok(pedestrian)<br>
-•	és a rendszer építői(System Architect)<br>
+<ul>
+    <li>A gyalogosok(pedestrian)</li>
+    <li>és a rendszer építői(System Architect)</li>
+</ul>
 Stakeholder típussal hozom őket létre:<br>
 Kitöltjük a definíció részeket. Szinonimákat is adhatunk meg egyes dolgokra, a gyalogosra adtunk is<br>
 <div><img src="13.png" ></div>
