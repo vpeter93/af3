@@ -62,23 +62,24 @@ Készítek még egy use case-et „ Activate traffic light to 'red' and pedestri
 <div><img src="18.png" ></div>
 Actort véletlenül se próbáljunk meg dupla kattintással adni a use case-hez, az kiveszi az actorok listájából.<br>
 A Branch részben meg tudjuk adni, hogy az adott jelenséget produkálja a rendszer, akkor az előző use case-ekből hova is ugorjon a végrehajtás.<br>
-<div><img src="19.png" ></div>
-<div><img src="20.png" ></div>
-Menjünk tovább az előzőleg létrehozott MSC specification-re, eddig nem tudtuk átnevezni, de ha adunk hozzá MSC-ket erre is képesek leszünk<br>
 <div><img src="21.png" ></div>
-Itt UML szekvencia diagramra hasonlító módon készíthetünk modellt. Itt ismét gondom akadt az inputok és outputok esztétikus elhelyezésével, mindegyik fordítva áll, mint ahogy akartam.<br>
 <div><img src="22.png" ></div>
+Menjünk tovább az előzőleg létrehozott MSC specification-re, eddig nem tudtuk átnevezni, de ha adunk hozzá MSC-ket erre is képesek leszünk<br>
+<div><img src="23.png" ></div>
+Itt UML szekvencia diagramra hasonlító módon készíthetünk modellt. Itt ismét gondom akadt az inputok és outputok esztétikus elhelyezésével, mindegyik fordítva áll, mint ahogy akartam.<br>
+<div><img src="24.png" ></div>
 Átmenetet úgy lehet behúzni, hogy nyomva tartjuk a Ctrl gombot, belekattintunk az egyik objektumba, majd húzzuk az egeret a másikhoz és végül elengedjük az egér gombját, eddigi észrevételem szerint teljesen véletlen, hogy melyik input/output melyik oldalra kerül, áthelyezni nem tudok őket. <br>
 A többi követelmény felvétele<br>
-<div><img src="23.png" ></div>
-<div><img src="24.png" ></div>
+<div><img src="25.png" ></div>
+<div><img src="26.png" ></div>
 Ezzel néhány apróságot eltekintve elkészültünk a követelményekkel, most térjünk át a Data dictionary-re.<br>
 Adatszerkezetek és függvények hozzáadása (Data dictionary)<br>
 A Data dictonary-be az oldalsó eszköztárról tudunk elemeket behúzni<br>
-<div><img src="25.png" ></div>
+<div><img src="27.png" ></div>
 Nem is időzünk itt sokat, a Properties-ben lehet módosítani a függvények visszatérési értékét/paramétereit és minden egyebet. Figyelem a void kulcsszó itt nem használható. Csak visszatérési értékkel rendelkező, állapotváltozót nem módosító függvényeket hozhatunk létre.<br>
-<div><img src="26.png" ></div>
+<div><img src="28.png" ></div>
 Elkészítjük a modellt, ügyelünk a konzisztens elnevezésekre, hogy tudjunk mindenre hivatkozni.<br>
 Miután a modell elkészült a use case-hez köthetünk egyes modellelemeket, ezt a use case beállításai között tehetjük meg:<br>
-
+<div><img src="29.png" ></div>
+<div><img src="30.png" ></div>
 
