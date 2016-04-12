@@ -15,28 +15,27 @@ Glossary Entry-k felvétele:<br>
 Át is nevezhetőek<br>
 Most töltsük meg a glossaryt tartalommal.<br>
 Kitöltjük a Controller definíciját<br>
-
-
+<div><img src="7.png" ></div>
 A Traffic entry definícióját is kitöltjük<br>
-
+<div><img src="8.png" ></div>
 Ha minden igaz, akkor ezzel meg is vagyunk az entrykkel.<br>
 Most adjuk meg a requirement sources-nál a követelmények forrásait<br>
 A követelmények forrásai lehetnek:<br>
 •	érdekelt felektől (stakeholders)<br>
 •	külső rendszerekből (external system)<br>
 •	dokumentumokból (document)<br>
-
+<div><img src="9.png" ></div>
 Esetünkben három külső rendszer van:<br>
 •	gyalogos lámpa(pedestrian light)<br>
 •	kijelző(Indicator)<br>
 •	közlekedési lámpa (traffic light)<br>
 Az ISO 26262 szabvány adja a funkcionális követelményeinket, ezt document típussal vesszük fel.<br>
 A general fülön el tudjuk nevezni és megadjuk a leírását<br>
-
+<div><img src="10.png" ></div>
 A Files fülön akár csatolhatjuk is a dokumentumot, én most be fogom linkelni a szabványt:<br>
-
+<div><img src="11.png" ></div>
 A leírását és a verzióját is megadhatjuk<br>
-
+<div><img src="12.png" ></div>
 Mivel a szabvány három részben van fent a weben, ezért mindhárom linket megadjuk:<br>
 A link utólag is szerkeszthető, viszont akkor írhatjuk újra a description és a version részt is, mert a program automatán<br> kitörli ezeket.<br>
 Most következzenek az érdekelt felek:<br>
@@ -44,9 +43,9 @@ Most következzenek az érdekelt felek:<br>
 •	és a rendszer építői(System Architect)<br>
 Stakeholder típussal hozom őket létre:<br>
 Kitöltjük a definíció részeket. Szinonimákat is adhatunk meg egyes dolgokra, a gyalogosra adtunk is<br>
-
+<div><img src="13.png" ></div>
 Ezzel megvannak a követelmények forrásai is<br>
-
+<div><img src="14.png" ></div>
 A követelmények:<br>
 Létrehozhatunk package-eket, hogy egységbe zárjunk egyes követelményeket. Megadhatunk use-case-eket is, amelyek felhasználói esetek<br>
 
