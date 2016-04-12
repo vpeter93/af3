@@ -9,10 +9,9 @@ Majd hozzuk létre a projektünk legfontosabb részeit: követelmények, Kompons
 <div align="center"><img src="4.png" align="center"></div>
 A létrejött projekt részeket könnyedén átnevezhetjük, ha jobb egérrel kattintunk rájuk és a rename-re kattintunk. Legalábbis elméletben. Ez a követelmények résznél még működött, de a Component-Architecture-t sehogy sem engedte átnevezni, bármit is írtam be.<br>
 Most foglalkozzunk a követelmények résszel, hozzáadunk az előbb is működő jobb gombos módszerrel egy Glossaryt, Requirement Sources-t és egy Requirements-et.<br>
-
+<div align="center"><img src="5.png" align="center"></div>
 Glossary Entry-k felvétele:<br>
-
-
+<div align="center"><img src="6.png" align="center"></div>
 Át is nevezhetőek<br>
 Most töltsük meg a glossaryt tartalommal.<br>
 Kitöltjük a Controller definíciját<br>
