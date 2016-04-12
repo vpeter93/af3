@@ -48,19 +48,19 @@ Ezzel megvannak a követelmények forrásai is<br>
 <div><img src="14.png" ></div>
 A követelmények:<br>
 Létrehozhatunk package-eket, hogy egységbe zárjunk egyes követelményeket. Megadhatunk use-case-eket is, amelyek felhasználói esetek<br>
-
+<div><img src="15.png" ></div>
 Létre is hozunk két package-et, egyet a követelményeknek, egyet a use case-eknek:<br>
-
+<div><img src="16.png" ></div>
 Először a Use Cases Package-ben dolgozzuk ki a use case-t<br>
 A use case tulajdonságainak nagy része egyszerűen beírható Az actor felvitelét mutatja az alábbi kép:<br>
-
+<div><img src="17.png" ></div>
 Észrevesszük, hogy Inputokat outputokat nem lehet még a modell nélkül ide beírni, ezekre még visszatérek.<br>
 A use case-hez felvehetünk scenariokat is, ezek különféle lefutásai ugyanannak a use case-nek, itt definiálhatjuk, hogy mi egy hibás lefutás vagy egy sikeres.<br>
 felvettem a Failure scenario-t a use case-ek között, itt adjuk meg, hogy mit kell tenni vészhelyzet esetén<br>
-
+<div><img src="17.png" ></div>
 Készítek még egy use case-et „ Activate traffic light to 'red' and pedestrian light to 'go'” néven, ez sikeres scenario<br>
-
-
+<div><img src="18.png" ></div>
+<div><img src="19.png" ></div>
 Actort véletlenül se próbáljunk meg dupla kattintással adni a use case-hez, az kiveszi az actorok listájából.<br>
 A Branch részben meg tudjuk adni, hogy az adott jelenséget produkálja a rendszer, akkor az előző use case-ekből hova is ugorjon a végrehajtás.<br>
 
