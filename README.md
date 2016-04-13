@@ -140,6 +140,25 @@ Váltsunk vissza State automaton nézetre, ott ahol a Data State fület választ
 <div><img src="images/m17.png" ></div>
 A program készítői az állapotgép kezdőállapotát +1 kimenetnek látszó karikával jelölték meg, amiből nem jön ki semmi és nem is megy be.<br>
 <div><img src="images/m18.png" ></div>
+Ezzel meg is van a sajnálatosan nem túl szép állapotgép. A ki/bemenetek és átmenete pozícionálásra még nem sikerült rájönni.<br>
+<div><img src="images/m19.png" ></div>
+A következő rész a Panel komponens, ez két külön komponensből fog állni:<br>
+<ul>
+    <li>A megjelenítő (Display)</li>
+    <li>A HAL(Hardware Abstration Layer)</li>
+</ul>
+Először a komponensek egymáshoz való viszonyát modellezzük le. A hibaüzenetünk még mindig ugyanaz.<br>
+<div><img src="images/m20.png" ></div>
+A HAL belül egy újabb állapotgép lesz, amiben ismét belső változókra lesz szükségünk, amiket a Data State fülön definiálhatunk:<br>
+<div><img src="images/m21.png" ></div>
+<div><img src="images/m22.png" ></div>
+<div><img src="images/m23.png" ></div>
+<div><img src="images/m24.png" ></div>
+Ha az eggyel feljebbi szinten mindent tisztességesen elneveztünk, akkor itt semmi hibát nem kaphatunk.
+Csináljuk most meg a megjelenítésért felelős Display komponenst. Ennek a belsejében egy operator panel lesz.<br>
+<div><img src="images/m25.png" ></div>
+Helyezhetünk bele nyomógombot:
+<div><img src="images/m26.png" ></div>
 
 
 
