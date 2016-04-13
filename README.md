@@ -185,3 +185,15 @@ A következő lépés egy Platform architecture és egy Deployment hozzáadása 
 <div><img src="images/g03.png" ></div>
 A platformhoz adjunk hozzá 2 db Generic_ECU-t és egy Generic_Bus-t<br>
 <div><img src="images/g04.png" ></div>
+Ezek legyenek ECU0, ECU1. A NET egy Generic_Bus, a bemenetei pedig Generic_BusController-ek
+
+<div><img src="images/g05.png" ></div>
+
+Az ECU-knál bemenetet Generic Sensor, kimenetet Generic Actuator néven találunk, ezeket rátehetjük a komponenseinkre. A Controller és Merge net bemenetei Generic_BusController-ek<br>
+<div><img src="images/g06.png" ></div>
+<div><img src="images/g07.png" ></div>
+Az egyes ki és bementek összerendeléseit a Deployment-ben tudjuk beállítani.<br>
+<div><img src="images/g08.png" ></div>
+Végül összerendeljük a modellbeli ki és bemeneteinket a Sensorokkal,Actuatorokkal,Bus_Controllerekkel.
+<div><img src="images/g09.png" ></div>
+<div><img src="images/g10.png" ></div>
