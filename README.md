@@ -178,5 +178,6 @@ Ennek segítségével később ellenőrzhetjük, hogy a modellünk megfelel-e az
 Az eddigiekben bemutatott modell természetesen azért készült, hogy később ellenőrzött programkód legyen belőle. Ehhez nyújt segítséget nekünk a generátormodell.<br>
 Először készítsünk egy új projektet. A Data dictionary és a Component Architecture Root tartalmát minden további nélkül átmásolhatjuk a generátormodellbe. Ezt egyszerűen jobbegér kattintással, majd Copy-val megtehetjük.<br>
 <div><img src="images/g01.png" ></div>
-
+Itt már csak a Merge és Controller komponensekre lesz szükségünk, a Display a modell szimulációja miatt kellett csak. A Panelt a generátormodellből törölhetjük.  A buttonB bemenethez viszont adjunk a modellhez még egy bemenetet, hisz ez eredetileg a Display-ből jött.
+<div><img src="images/g011.png" ></div>
 
