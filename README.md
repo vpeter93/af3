@@ -197,3 +197,20 @@ Az egyes ki és bementek összerendeléseit a Deployment-ben tudjuk beállítani
 Végül összerendeljük a modellbeli ki és bemeneteinket a Sensorokkal,Actuatorokkal,Bus_Controllerekkel.
 <div><img src="images/g09.png" ></div>
 <div><img src="images/g10.png" ></div>
+A NET és az ECU0, ECU1 portjait fizikailag is kössük össze:<br>
+<div><img src="images/g11.png" ></div>
+Ezzel elkészült a generátormodell. A következő lépés az lesz, hogy C kódot generálunk a modellből.
+Futtassuk jobb egérrel kattintva a Deployment-re a Run Deployment generator parancsot, majd válasszuk ki a projektet, ahova szeretnénk a kódot tenni.<br>
+<div><img src="images/g12.png" ></div>
+Storage nézetbe váltva láthatjuk, hogy mit generált a program:
+<div><img src="images/g13.png" ></div>
+A Modelling nézetre visszatérve futtassuk a Component Architecture Root-on a C kód generátort
+<div><img src="images/g14.png" ></div>
+Az előzőhöz hasonlóan válasszuk ki a projektet, majd Storage nézetben nézzük meg, hogy mi lett belőle:<br>
+<div><img src="images/g15.png" ></div>
+Az így elkészült forráskódot megnyithatjuk kedvenc C fordítónkban, vagy ha szeretnénk helyben megnézni, akkor használjuk a beépített text editort:<br>
+<div><img src="images/g16.png" ></div>
+<div><img src="images/g17.png" ></div>
+
+
+
