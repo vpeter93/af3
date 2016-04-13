@@ -96,7 +96,7 @@ Három komponensből építkezünk:<br>
 <li>Panel</li>
 </ul>
 Hozzuk ezeket létre a Component Architecture-ben, új komponensek hozzáadásával:<br>
-
+<div><img src="images/m1.png" ></div>
 
 
 Miután a modell elkészült a use case-hez köthetünk egyes modellelemeket, ezt a use case beállításai között tehetjük meg:<br>
