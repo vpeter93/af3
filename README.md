@@ -175,7 +175,7 @@ Miután a modell elkészült a use case-hez köthetünk egyes modellelemeket, ez
 Ennek segítségével később ellenőrzhetjük, hogy a modellünk megfelel-e az előzetesen felállított követelményeknek.
 
 <h2>A generátormodell</h2><br>
-Az eddigiekben bemutott modell természetesen azért készült, hogy később ellenőrzött programkód legyen belőle. Ehhez nyújt segítséget nekünk a generátormodell.<br>
-Mindenek előtt készítsünk egy új projektet.
+Az eddigiekben bemutatott modell természetesen azért készült, hogy később ellenőrzött programkód legyen belőle. Ehhez nyújt segítséget nekünk a generátormodell.<br>
+Először készítsünk egy új projektet.<br>
 
 
