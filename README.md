@@ -112,7 +112,7 @@ Az átmenetnek is tudunk nevet adni a properties részben:
 <div><img src="images/m7.png" ></div>
 Csináljuk meg a komponensek belsejét is, a Merge komponensben egy állapotdiagram lesz. Húzzuk is be az eszköztárról:<br>
 <div><img src="images/m8.png" ></div>
-Az átmentek őrfeltételeiben hivatkozhatunk a ki és bemeneteinkre és használhatjuk a Data dictionary-ben definiált értékéket is egy-egy enumeration típushoz. Ezek furcsamód függvényhívásszerűen vannak jelölve, alább a Present( ) Az egy lehetséges értéke a Signal típusnak.<br>
+Az átmentek őrfeltételeiben hivatkozhatunk a ki és bemeneteinkre és használhatjuk a Data dictionary-ben definiált értékéket is egy-egy enumeration típushoz. Ezek furcsamód függvényhívásszerűen vannak jelölve, alább a Present( ) egy lehetséges értéke a Signal típusnak.<br>
 <div><img src="images/m9.png" ></div>
 
 Miután a modell elkészült a use case-hez köthetünk egyes modellelemeket, ezt a use case beállításai között tehetjük meg:<br>
