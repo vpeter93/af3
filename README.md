@@ -135,6 +135,13 @@ Váltsunk vissza State automaton nézetre, ott ahol a Data State fület választ
 <div><img src="images/m14.png" ></div>
 Ügyeljünk az eggyel felsőbb szint elnevezéseire, hogy valóban azokat használjuk-e, az én esetemben elfeledtem egy Outputot átnevezni a Behaviornál és most ezért ír hibát. Ügyeljünk a szóközökre is, ha mindent jól elneveztünk és csak arra hivatkozunk, ami valóban létezik, akkor nem kapunk ilyen hibákat.<br>
 <div><img src="images/m15.png" ></div>
+Ügyeljünk rá, hogy elsőre jó helyre kerüljenek a nyilak és rögtön esztétikus legyen a modell, mert a state automaton-nál hiába próbáljuk átpakolni az elcsúszott inputokat/outputokat a program kissé öntörvényűen értelmezi, hogy hova is tennénk ezeket:<br>
+<div><img src="images/m16.png" ></div>
+<div><img src="images/m17.png" ></div>
+A program készítői az állapotgép kezdőállapotát +1 kimenetnek látszó karikával jelölték meg, amiből nem jön ki semmi és nem is megy be.<br>
+<div><img src="images/m18.png" ></div>
+
+
 
 Miután a modell elkészült a use case-hez köthetünk egyes modellelemeket, ezt a use case beállításai között tehetjük meg:<br>
 <div><img src="images/29.png" ></div>
