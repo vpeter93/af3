@@ -176,6 +176,5 @@ Ennek segítségével később ellenőrzhetjük, hogy a modellünk megfelel-e az
 
 <h2>A generátormodell</h2><br>
 Az eddigiekben bemutatott modell természetesen azért készült, hogy később ellenőrzött programkód legyen belőle. Ehhez nyújt segítséget nekünk a generátormodell.<br>
-Először készítsünk egy új projektet.<br>
-A Data dictionary és a Component Architecture Root tartalmát minden további nélkül átmásolhatjuk a generátormodellbe. Ezt egyszerűen jobbegér kattintással, majd Copy-val  és Paste-tel megtehetjük.<br>
+Először készítsünk egy új projektet. A Data dictionary és a Component Architecture Root tartalmát minden további nélkül átmásolhatjuk a generátormodellbe. Ezt egyszerűen jobbegér kattintással, majd Copy-val  és Paste-tel megtehetjük.<br>
 
