@@ -102,6 +102,15 @@ A properties fülön ezek a komponensek átnevezhetőek, ahogy már a többi mod
 Először elkészítjük a komponensek egymáshoz való viszonyát leíró legfelsőbb komponens diagramot.<br>
 Inputok hozzáadása a modellhez az input karika diagramterületre való behúzásával történik:<br>
 <div><img src="images/m3.png" ></div>
+Az input properties menüjében be tudjuk állítani a típusát és megadhatjuk a nevét is. Típusokból azokat tudjuk használni, amelyeket megadtunk a Data dictionary-ban, vagy választhatunk az int, boolean, double primitív típusok közül.<br>
+<div><img src="images/m4.png" ></div>
+Ahhoz, hogy az inputból átmenetet húzzunk egy komponensbe, le kell nyomni a Ctrl billentyűt és az egér gombját nyomva tartva tudunk nyilat húzni. Ha nem tetszik az input elhelyezkedése a komponensen, akkor egyszerűen arrébb húzhatjuk fogd és vidd módszerrel:<br>
+<div><img src="images/m5.png" ></div>
+Az átmenetnek is tudunk nevet adni a properties részben:
+<div><img src="images/m6.png" ></div>
+Összeraktuk a legfelsőbb komponens diagramot, ne ijedjünk meg az alábbi hibaüzenetttől, mivel nem tettük időfüggővé a rendszert és nincs megvalósítva egyik komponensnek sem a belseje, ezért ezt kapjuk:<br>
+<div><img src="images/m7.png" ></div>
+
 
 
 
