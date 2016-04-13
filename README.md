@@ -87,6 +87,18 @@ A Data dictonary-be az oldalsó eszköztárról tudunk elemeket behúzni<br>
 Nem is időzünk itt sokat, a Properties-ben lehet módosítani a függvények visszatérési értékét/paramétereit és minden egyebet. Figyelem a void kulcsszó itt nem használható. Csak visszatérési értékkel rendelkező, állapotváltozót nem módosító függvényeket hozhatunk létre.<br>
 <div><img src="images/28.png" ></div>
 Elkészítjük a modellt, ügyelünk a konzisztens elnevezésekre, hogy tudjunk mindenre hivatkozni.<br>
+
+<h2>A modell elkészítése</h2><br>
+Három komponensből építkezünk:<br>
+<ul>
+<li>Controller</li>
+<li>Merge</li>
+<li>Panel</li>
+</ul>
+Hozzuk ezeket létre a Component Architecture-ben, új komponensek hozzáadásával:<br>
+
+
+
 Miután a modell elkészült a use case-hez köthetünk egyes modellelemeket, ezt a use case beállításai között tehetjük meg:<br>
 <div><img src="images/29.png" ></div>
 <div><img src="images/30.png" ></div>
