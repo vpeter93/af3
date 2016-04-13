@@ -114,6 +114,27 @@ Csináljuk meg a komponensek belsejét is, a Merge komponensben egy állapotdiag
 <div><img src="images/m8.png" ></div>
 Az átmentek őrfeltételeiben hivatkozhatunk a ki és bemeneteinkre és használhatjuk a Data dictionary-ben definiált értékéket is egy-egy enumeration típushoz. Ezek furcsamód függvényhívásszerűen vannak jelölve, alább a Present( ) egy lehetséges értéke a Signal típusnak.<br>
 <div><img src="images/m9.png" ></div>
+A megfelelő átmenetek behúzása után a modell ezen részével nincs több dolgunk, specifikáltuk a Merge komponens működését:<br>
+<div><img src="images/m10.png" ></div>
+A Contoller komponensbe egy újabb komponenst teszünk Behavior néven, melynek a belsejében majd egy állapotgép lesz.
+Elkészült a Behavior, még mindig megkapjuk ugyanazt a hibaüzenetet, ne foglalkozzunk vele:<br>
+<div><img src="images/m11.png" ></div>
+Húzzunk be az eszköztárról egy újabb state automaton-t a Behavioron belülre. Vegyük fel a közlekedési lámpánk állapotait:<br>
+<ul>
+    <li>Red</li>
+    <li>Yellow</li>
+    <li>RedYellow</li></li>
+    <li>Green</li>
+    <li>Init</li>
+</ul>
+Majd menjünk a Data State fülre
+<div><img src="images/m12.png" ></div>
+Itt belső változókat lehet a modellhez hozzáadni. Adjunk is hozzá egy idő(time) int változót az oldalsó Add gombbal:<br>
+<div><img src="images/m13.png" ></div>
+Váltsunk vissza State automaton nézetre, ott ahol a Data State fület választottuk és hozzuk létre a modellt. A time változóra innentől hivatkozhatunk őrfeltételekben és akciókban is.<br>
+<div><img src="images/m14.png" ></div>
+Ügyeljünk az eggyel felsőbb szint elnevezéseire, hogy valóban azokat használjuk-e, az én esetemben elfeledtem egy Outputot átnevezni a Behaviornál és most ezért ír hibát. Ügyeljünk a szóközökre is, ha mindent jól elneveztünk és csak arra hivatkozunk, ami valóban létezik, akkor nem kapunk ilyen hibákat.<br>
+<div><img src="images/m15.png" ></div>
 
 Miután a modell elkészült a use case-hez köthetünk egyes modellelemeket, ezt a use case beállításai között tehetjük meg:<br>
 <div><img src="images/29.png" ></div>
