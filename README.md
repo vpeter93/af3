@@ -159,10 +159,18 @@ Csináljuk most meg a megjelenítésért felelős Display komponenst. Ennek a be
 <div><img src="images/m25.png" ></div>
 Helyezhetünk bele nyomógombot:
 <div><img src="images/m26.png" ></div>
-
-
-
+És címkéket is:
+<div><img src="images/m27.png" ></div>
+És persze lámpákat:
+<div><img src="images/m28.png" ></div>
+<div><img src="images/m29.png" ></div>
+Végül kezdjünk valamit a hibaüzenettel, ami végig velünk volt modellezés közben:
+<div><img src="images/m30.png" ></div>
+A hibaüzenetre a megoldás annyi, hogy a Controller Behavior-jánál beállítjuk erősen kauzálisra rendszert és utána már nem szól, hogy gyengén kauzális.
+<div><img src="images/m31.png" ></div>
+Ezzel el is készült a modell.<br>
 Miután a modell elkészült a use case-hez köthetünk egyes modellelemeket, ezt a use case beállításai között tehetjük meg:<br>
 <div><img src="images/29.png" ></div>
 <div><img src="images/30.png" ></div>
+Ennek segítségével később ellenőrzhetjük, hogy a modellünk megfelel-e az előzetesen felállított követelményeknek.
 
