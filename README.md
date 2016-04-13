@@ -174,3 +174,8 @@ Miután a modell elkészült a use case-hez köthetünk egyes modellelemeket, ez
 <div><img src="images/30.png" ></div>
 Ennek segítségével később ellenőrzhetjük, hogy a modellünk megfelel-e az előzetesen felállított követelményeknek.
 
+<h2>A generátormodell</h2><br>
+Az eddigiekben bemutott modell természetesen azért készült, hogy később ellenőrzött programkód legyen belőle. Ehhez nyújt segítséget nekünk a generátormodell.<br>
+Mindenek előtt készítsünk egy új projektet.
+
+
