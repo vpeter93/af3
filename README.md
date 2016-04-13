@@ -97,6 +97,13 @@ Három komponensből építkezünk:<br>
 </ul>
 Hozzuk ezeket létre a Component Architecture-ben, új komponensek hozzáadásával:<br>
 <div><img src="images/m1.png" ></div>
+A properties fülön ezek a komponensek átnevezhetőek, ahogy már a többi modellelemnél is megszokhattuk.<br>
+<div><img src="images/m2.png" ></div>
+Először elkészítjük a komponensek egymáshoz való viszonyát leíró legfelsőbb komponens diagramot.<br>
+Inputok hozzáadása a modellhez az input karika diagramterületre való behúzásával történik:<br>
+<div><img src="images/m3.png" ></div>
+
+
 
 
 Miután a modell elkészült a use case-hez köthetünk egyes modellelemeket, ezt a use case beállításai között tehetjük meg:<br>
