@@ -1,4 +1,4 @@
-# af3
+# autofocus3 használatának bemutatása a közelekedési lámpa példáján keresztül.
 <h1 align="center">AutoFOCUS 3 traffic light example</h1><br>
 Nyissuk meg az autofocust<br>
 Kattintsunk a File-> New AF3-Project-ra<br>
