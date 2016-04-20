@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org-fortiss-af3-project:FileProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org-fortiss-af3-bounds="http://www.fortiss.org/af3/bounds" xmlns:org-fortiss-af3-component="http://www.fortiss.org/af3/component" xmlns:org-fortiss-af3-component-annotation="http://www.fortiss.org/af3/component/annotation" xmlns:org-fortiss-af3-expression="http://www.fortiss.org/af3/expression" xmlns:org-fortiss-af3-expression-definitions="http://www.fortiss.org/af3/expression/definitions" xmlns:org-fortiss-af3-expression-terms="http://www.fortiss.org/af3/expression/terms" xmlns:org-fortiss-af3-expression-types="http://www.fortiss.org/af3/expression/types" xmlns:org-fortiss-af3-mira="http://www.fortiss.org/af3/mira" xmlns:org-fortiss-af3-mira-glossary="http://www.fortiss.org/af3/mira/glossary" xmlns:org-fortiss-af3-mira-requirementSource="http://www.fortiss.org/af3/mira/requirementSource" xmlns:org-fortiss-af3-mira-usecase="http://www.fortiss.org/af3/mira/usecase" xmlns:org-fortiss-af3-mira-verification="http://www.fortiss.org/af3/mira/verification" xmlns:org-fortiss-af3-msc="http://www.fortiss.org/af3/msc" xmlns:org-fortiss-af3-project="http://www.fortiss.org/af3/project" xmlns:org-fortiss-af3-project-configuration="http://www.fortiss.org/af3/project/configuration" xmlns:org-fortiss-af3-project-development="http://www.fortiss.org/af3/project/development" xmlns:org-fortiss-af3-project-execution="http://www.fortiss.org/af3/project/execution" xmlns:org-fortiss-af3-safety-annotation="http://www.fortiss.org/af3/safety/annotation" xmlns:org-fortiss-af3-state="http://www.fortiss.org/af3/state" xmlns:org-fortiss-tooling-base-model-layout="http://www.fortiss.org/tooling/base/model/layout" xmi:id="0" name="Robotok">
+  <rootElements xsi:type="org-fortiss-af3-project:ProjectConfiguration" xmi:id="1" id="1">
+    <configurationElements xsi:type="org-fortiss-af3-project-configuration:TypeSystemConfiguration" xmi:id="2" id="2">
+      <typesystem xsi:type="org-fortiss-af3-expression:MicroTypeSystem"/>
+    </configurationElements>
+    <configurationElements xsi:type="org-fortiss-af3-project-configuration:DevelopmentProcessConfiguration" xmi:id="3" id="3">
+      <development xsi:type="org-fortiss-af3-project-development:DummyDevelopmentProcess"/>
+    </configurationElements>
+  </rootElements>
+  <rootElements xsi:type="org-fortiss-af3-component:ComponentArchitecture" xmi:id="4" id="4" name="Component Architecture">
+    <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="5" id="5" name="Component Architecture Root" comment="">
+      <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="8" id="8" name="Robot1" comment="" referencedBy="//@rootElements.3/@containedElements.1/@containedElements.1/@containedElements.2/@topEntity/@containedElements.1/@specifications.0/@modelElementReference">
+        <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="643" id="643" name="Behaviour" comment="">
+          <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="644" id="644" stronglyCausal="true"/>
+          <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="645" id="645"/>
+          <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="646" id="646"/>
+          <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="647" id="647"/>
+          <specifications xsi:type="org-fortiss-af3-state:StateAutomaton" xmi:id="648" id="648">
+            <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="649" id="649" name="State Automaton" comment="">
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="650" id="650" name="Init" comment="Initalize variables">
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="651" id="651" initial="true">
+                  <idleTransitionsSpecifications xmi:id="652" id="652">
+                    <actions stringRepresentation="time = 0">
+                      <variable identifier="time"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                    </actions>
+                    <actions stringRepresentation="recieveTime = 3">
+                      <variable identifier="recieveTime"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="3"/>
+                    </actions>
+                  </idleTransitionsSpecifications>
+                </specifications>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="653" id="653" name="IntiWaitingOutput" comment="" outgoing="689">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="0.0688564893010446"/>
+                </connectors>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="58" y="58"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="654" id="654" name="Waiting" comment="Robot is waiting">
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="655" id="655">
+                  <idleTransitionsSpecifications xmi:id="656" id="656"/>
+                </specifications>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="657" id="657" name="WaitingInitInput" comment="" incoming="689">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-3.0060649396042924"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="658" id="658" name="WaitingWorkingInput1" comment="" incoming="692">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="2.0344439357957027"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="659" id="659" name="WaitWaitOutput" comment="" outgoing="695">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-1.9409671546371132"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="660" id="660" name="WaitWaitInput" comment="" incoming="695">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-1.1801892830972098"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="661" id="661" name="WaitingRecieveOutput" comment="" outgoing="700">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="0.017542060057402487"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="662" id="662" name="RecieveWaitingInput" comment="" incoming="704">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="1.6563016204731014"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="663" id="663" name="WaitingWorkingOutput" comment="" outgoing="707">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-2.5471176485149303"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="664" id="664" name="SendWaitInput" comment="" incoming="720">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-1.4845907531191178"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="665" id="665" name="WaitSendOutput" comment="" outgoing="723">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-2.0708650700102096"/>
+                </connectors>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="250" y="120"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="163" height="101"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="666" id="666" name="SendMessage" comment="send a message to other robot">
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="667" id="667">
+                  <idleTransitionsSpecifications xmi:id="668" id="668"/>
+                </specifications>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="669" id="669" name="SendSendOutput" comment="" outgoing="717">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-1.2134876437867965"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="670" id="670" name="SendSendInput" comment="" incoming="717">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-1.4894944551865001"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="671" id="671" name="SendWaitOutput1" comment="" outgoing="720">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-1.7427890038129985"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="672" id="672" name="WaitSendInput" comment="" incoming="723">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-2.0344439357957027"/>
+                </connectors>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="412" y="321"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="204" height="128"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="673" id="673" name="Working" comment="Robot is working">
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="674" id="674">
+                  <idleTransitionsSpecifications xmi:id="675" id="675"/>
+                </specifications>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="676" id="676" name="WorkingWaitingOutput" comment="" outgoing="692">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-0.21243202050874216"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="677" id="677" name="WaitingWOrkingInput" comment="" incoming="707">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-2.0222494183474513"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="678" id="678" name="workworkOutput" comment="" outgoing="711">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-1.2832204960144495"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="679" id="679" name="workworkInput" comment="" incoming="711">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="0.32032808024938425"/>
+                </connectors>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="63" y="302"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="163" height="101"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="680" id="680" name="RecieveMessage" comment="Recieve a message from other robot.">
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="681" id="681">
+                  <idleTransitionsSpecifications xmi:id="682" id="682"/>
+                </specifications>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="683" id="683" name="WaitingRecieveInput" comment="" incoming="700">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-2.97975522235137"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="684" id="684" name="RecieveWaitingOutput" comment="" outgoing="704">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="2.4329663814621227"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="685" id="685" name="RecieveRecieveOutput" comment="" outgoing="714">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-2.4169890460671337"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="686" id="686" name="RecieveRecieveOutputInput" comment="" incoming="714">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-1.6252877830356278"/>
+                </connectors>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="532" y="73"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="232" height="145"/>
+              </containedElements>
+              <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="687" id="687">
+                <idleTransitionsSpecifications xmi:id="688" id="688"/>
+              </specifications>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="689" id="689" name="AfterInit" comment="" source="653" target="657">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="690" id="690">
+                  <guard stringRepresentation="time == 0">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Robot2StateOutput = Waiting( )">
+                    <variable identifier="Robot2StateOutput"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="691" id="691" name="Waiting"/>
+                    </value>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="692" id="692" name="WorkToWait" comment="" source="676" target="658">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="693" id="693">
+                  <guard stringRepresentation="time == 100">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="100"/>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Robot2StateOutput = Waiting( )">
+                    <variable identifier="Robot2StateOutput"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="694" id="694" name="Waiting"/>
+                    </value>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="695" id="695" name="wait" comment="" source="659" target="660">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="696" id="696">
+                  <guard stringRepresentation="time &lt; 70 &amp;&amp; Robot2InputInBehavior != SendMessage( ) || time >= 100 &amp;&amp; time &lt; 120 &amp;&amp; Robot2InputInBehavior != SendMessage( )">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Or"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="And"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                          <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="LowerThan"/>
+                          <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                          <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="70"/>
+                        </arguments>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                          <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="NotEqual"/>
+                          <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Robot2InputInBehavior"/>
+                          <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                            <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="739" id="739" name="SendMessage"/>
+                          </arguments>
+                        </arguments>
+                      </arguments>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="And"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                          <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="And"/>
+                          <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                            <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="GreaterEqual"/>
+                            <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                            <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="100"/>
+                          </arguments>
+                          <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                            <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="LowerThan"/>
+                            <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                            <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="120"/>
+                          </arguments>
+                        </arguments>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                          <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="NotEqual"/>
+                          <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Robot2InputInBehavior"/>
+                          <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                            <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="740" id="740" name="SendMessage"/>
+                          </arguments>
+                        </arguments>
+                      </arguments>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="time = time + 1">
+                    <variable identifier="time"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                    </value>
+                  </actions>
+                  <actions stringRepresentation="Robot2StateOutput = Waiting( )">
+                    <variable identifier="Robot2StateOutput"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="699" id="699" name="Waiting"/>
+                    </value>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points">
+                  <points x="333" y="28"/>
+                </layoutData>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="700" id="700" name="WaitToRecieve" comment="" source="661" target="683">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="701" id="701">
+                  <guard stringRepresentation="Robot2InputInBehavior == SendMessage( )">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Robot2InputInBehavior"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="702" id="702" name="SendMessage"/>
+                      </arguments>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Robot2StateOutput = RecieveMessage( )">
+                    <variable identifier="Robot2StateOutput"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="703" id="703" name="RecieveMessage"/>
+                    </value>
+                  </actions>
+                  <actions stringRepresentation="recieveTime = 3">
+                    <variable identifier="recieveTime"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="3"/>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="704" id="704" name="RecieveToWait" comment="" source="684" target="662">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="705" id="705">
+                  <guard stringRepresentation="recieveTime == 0">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="recieveTime"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Robot2StateOutput = Waiting( )">
+                    <variable identifier="Robot2StateOutput"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="706" id="706" name="Waiting"/>
+                    </value>
+                  </actions>
+                  <actions stringRepresentation="message = Robot2OutputInInput">
+                    <variable identifier="message"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Robot2OutputInInput"/>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="707" id="707" name="WaitingtoWorking" comment="" source="663" target="677">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="708" id="708">
+                  <guard stringRepresentation="time == 70 &amp;&amp; Robot2InputInBehavior != SendMessage( )">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="And"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="70"/>
+                      </arguments>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="NotEqual"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Robot2InputInBehavior"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                          <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="741" id="741" name="SendMessage"/>
+                        </arguments>
+                      </arguments>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Robot2StateOutput = Working( )">
+                    <variable identifier="Robot2StateOutput"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="710" id="710" name="Working"/>
+                    </value>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="711" id="711" name="work" comment="" source="678" target="679">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="712" id="712">
+                  <guard stringRepresentation="time &lt; 100">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="LowerThan"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="100"/>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="time = time +1">
+                    <variable identifier="time"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                    </value>
+                  </actions>
+                  <actions stringRepresentation="Robot2StateOutput = Working( )">
+                    <variable identifier="Robot2StateOutput"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="713" id="713" name="Working"/>
+                    </value>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points">
+                  <points x="182" y="470"/>
+                </layoutData>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="714" id="714" name="recieve" comment="" source="685" target="686">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="715" id="715">
+                  <guard stringRepresentation="recieveTime > 0">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="GreaterThan"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="recieveTime"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="time = time + 1">
+                    <variable identifier="time"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                    </value>
+                  </actions>
+                  <actions stringRepresentation="Robot2StateOutput = RecieveMessage( )">
+                    <variable identifier="Robot2StateOutput"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="716" id="716" name="RecieveMessage"/>
+                    </value>
+                  </actions>
+                  <actions stringRepresentation="recieveTime = recieveTime - 1">
+                    <variable identifier="recieveTime"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Subtract"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="recieveTime"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                    </value>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points">
+                  <points x="600" y="27"/>
+                </layoutData>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="717" id="717" name="try" comment="" source="669" target="670">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="718" id="718">
+                  <guard stringRepresentation="Robot2InputInBehavior == Waiting( )">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Robot2InputInBehavior"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="719" id="719" name="Waiting"/>
+                      </arguments>
+                    </expression>
+                  </guard>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points">
+                  <points x="667" y="263"/>
+                </layoutData>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="720" id="720" name="SendMessageToWaiting" comment="this robot send a message to robot1 with number 42" source="671" target="664">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="721" id="721">
+                  <guard stringRepresentation="Robot2InputInBehavior == Waiting( )">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Robot2InputInBehavior"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="722" id="722" name="Waiting"/>
+                      </arguments>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Robot2OutputInBehavior = 42">
+                    <variable identifier="Robot2OutputInBehavior"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="42"/>
+                  </actions>
+                  <actions stringRepresentation="time = 0">
+                    <variable identifier="time"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="723" id="723" name="WaitToSend" comment="" source="665" target="672">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="724" id="724">
+                  <guard stringRepresentation="time == 120">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="120"/>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="time = 0">
+                    <variable identifier="time"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points">
+                  <points x="335" y="360"/>
+                </layoutData>
+              </connections>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            </containedElements>
+            <dataStateVariables xmi:id="725" id="725">
+              <variable identifier="time"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+              <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            </dataStateVariables>
+            <dataStateVariables xmi:id="726" id="726">
+              <specifications xsi:type="org-fortiss-af3-bounds:VariableBoundsSpecification" xmi:id="727" id="727" upperBound="254" lowerBound="-255"/>
+              <variable identifier="recieveTime"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:IntConst" value="3"/>
+              <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            </dataStateVariables>
+            <dataStateVariables xmi:id="728" id="728">
+              <variable identifier="message"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+              <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            </dataStateVariables>
+          </specifications>
+          <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="729" id="729" name="Robot2OutputInInput" comment="">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="730" id="730">
+              <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <specifications xsi:type="org-fortiss-af3-bounds:VariableBoundsSpecification" xmi:id="731" id="731" upperBound="254" lowerBound="-255"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="36" orientation="WEST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="732" id="732" name="Robot2OutputInBehavior" comment="">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="733" id="733">
+              <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <specifications xsi:type="org-fortiss-af3-bounds:VariableBoundsSpecification" xmi:id="734" id="734" upperBound="254" lowerBound="-255"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="108" orientation="WEST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="735" id="735" name="Robot2InputInBehavior" comment="">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="736" id="736">
+              <type xsi:type="org-fortiss-af3-expression-types:TDefinedType" name="RobotState" def="27"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="12" orientation="WEST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="737" id="737" name="Robot2StateOutput" comment="">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="738" id="738">
+              <type xsi:type="org-fortiss-af3-expression-types:TDefinedType" name="RobotState" def="27"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="84" orientation="WEST"/>
+          </connectors>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="269" y="65"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="193" height="157"/>
+        </containedElements>
+        <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="9" id="9"/>
+        <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="10" id="10"/>
+        <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="11" id="11"/>
+        <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="12" id="12"/>
+        <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="41" id="41" name="Robot1Output" comment="" outgoing="53">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="42" id="42">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <specifications xsi:type="org-fortiss-af3-bounds:VariableBoundsSpecification" xmi:id="43" id="43" upperBound="254" lowerBound="-255"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="24" y="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="60" orientation="EAST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="49" id="49" name="Robot1Input" comment="" incoming="52">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="50" id="50">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <specifications xsi:type="org-fortiss-af3-bounds:VariableBoundsSpecification" xmi:id="51" id="51" upperBound="254" lowerBound="-255"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="24" y="156"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="84" orientation="EAST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="273" id="273" name="Robot1StateOutput" comment="" outgoing="277">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="274" id="274">
+            <type xsi:type="org-fortiss-af3-expression-types:TDefinedType" name="RobotState" def="27"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <specifications xsi:type="org-fortiss-af3-bounds:VariableBoundsSpecification" xmi:id="287" id="287" upperBound="254" lowerBound="-255"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="24" y="36"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="132" orientation="EAST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="284" id="284" name="Robot2StateInput" comment="" incoming="286">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="285" id="285">
+            <type xsi:type="org-fortiss-af3-expression-types:TDefinedType" name="RobotState" def="27"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <specifications xsi:type="org-fortiss-af3-bounds:VariableBoundsSpecification" xmi:id="290" id="290" upperBound="254" lowerBound="-255"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="24" y="192"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="108" orientation="EAST"/>
+        </connectors>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="36" y="12"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="181" height="217"/>
+      </containedElements>
+      <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="13" id="13" name="Robot2" comment="" referencedBy="//@rootElements.3/@containedElements.1/@containedElements.1/@containedElements.2/@topEntity/@containedElements.0/@specifications.0/@modelElementReference">
+        <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="67" id="67" name="Behaviour" comment="">
+          <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="68" id="68" stronglyCausal="true"/>
+          <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="69" id="69"/>
+          <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="70" id="70"/>
+          <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="71" id="71"/>
+          <specifications xsi:type="org-fortiss-af3-state:StateAutomaton" xmi:id="411" id="411">
+            <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="412" id="412" name="State Automaton" comment="">
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="413" id="413" name="Init" comment="Initalize variables">
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="414" id="414" initial="true">
+                  <idleTransitionsSpecifications xmi:id="415" id="415">
+                    <actions stringRepresentation="time = 0">
+                      <variable identifier="time"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                    </actions>
+                    <actions stringRepresentation="recieveTime = 3">
+                      <variable identifier="recieveTime"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="3"/>
+                    </actions>
+                  </idleTransitionsSpecifications>
+                </specifications>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="416" id="416" name="IntiWaitingOutput" comment="" outgoing="446">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="0.0688564893010446"/>
+                </connectors>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="58" y="58"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="417" id="417" name="Waiting" comment="Robot is waiting">
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="418" id="418">
+                  <idleTransitionsSpecifications xmi:id="419" id="419"/>
+                </specifications>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="420" id="420" name="WaitingInitInput" comment="" incoming="446">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-3.0060649396042924"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="421" id="421" name="WaitingWorkingInput1" comment="" incoming="449">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="2.0344439357957027"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="422" id="422" name="WaitWaitOutput" comment="" outgoing="452">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-1.9409671546371132"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="423" id="423" name="WaitWaitInput" comment="" incoming="452">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-1.1801892830972098"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="424" id="424" name="WaitingRecieveOutput" comment="" outgoing="456">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="0.017542060057402487"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="425" id="425" name="RecieveWaitingInput" comment="" incoming="460">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="1.6563016204731014"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="426" id="426" name="WaitingWorkingOutput" comment="" outgoing="463">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-2.5471176485149303"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="549" id="549" name="SendWaitInput" comment="" incoming="550">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-1.4845907531191178"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="578" id="578" name="WaitSendOutput" comment="" outgoing="580">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-2.0708650700102096"/>
+                </connectors>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="250" y="120"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="163" height="101"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="427" id="427" name="SendMessage" comment="send a message to other robot">
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="428" id="428">
+                  <idleTransitionsSpecifications xmi:id="429" id="429"/>
+                </specifications>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="540" id="540" name="SendSendOutput" comment="" outgoing="542">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-1.2134876437867965"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="541" id="541" name="SendSendInput" comment="" incoming="542">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-1.4894944551865001"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="548" id="548" name="SendWaitOutput1" comment="" outgoing="550">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-1.7427890038129985"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="579" id="579" name="WaitSendInput" comment="" incoming="580">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-2.0344439357957027"/>
+                </connectors>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="412" y="321"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="204" height="128"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="430" id="430" name="Working" comment="Robot is working">
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="431" id="431">
+                  <idleTransitionsSpecifications xmi:id="432" id="432"/>
+                </specifications>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="433" id="433" name="WorkingWaitingOutput" comment="" outgoing="449">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-0.21243202050874216"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="434" id="434" name="WaitingWOrkingInput" comment="" incoming="463">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-2.0222494183474513"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="435" id="435" name="workworkOutput" comment="" outgoing="467">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-1.2832204960144495"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="436" id="436" name="workworkInput" comment="" incoming="467">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="0.32032808024938425"/>
+                </connectors>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="63" y="302"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="163" height="101"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="437" id="437" name="RecieveMessage" comment="Recieve a message from other robot.">
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="438" id="438">
+                  <idleTransitionsSpecifications xmi:id="439" id="439"/>
+                </specifications>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="440" id="440" name="WaitingRecieveInput" comment="" incoming="456">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-2.97975522235137"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="441" id="441" name="RecieveWaitingOutput" comment="" outgoing="460">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="2.4329663814621227"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="442" id="442" name="RecieveRecieveOutput" comment="" outgoing="470">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-2.4169890460671337"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="443" id="443" name="RecieveRecieveOutputInput" comment="" incoming="470">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-1.6252877830356278"/>
+                </connectors>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="532" y="73"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="232" height="145"/>
+              </containedElements>
+              <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="444" id="444">
+                <idleTransitionsSpecifications xmi:id="445" id="445"/>
+              </specifications>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="446" id="446" name="AfterInit" comment="" source="416" target="420">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="447" id="447">
+                  <guard stringRepresentation="time == 0">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Robot2StateOutput = Waiting( )">
+                    <variable identifier="Robot2StateOutput"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="481" id="481" name="Waiting"/>
+                    </value>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="449" id="449" name="WorkToWait" comment="" source="433" target="421">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="450" id="450">
+                  <guard stringRepresentation="time == 50">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="50"/>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Robot2StateOutput = Waiting( )">
+                    <variable identifier="Robot2StateOutput"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="557" id="557" name="Waiting"/>
+                    </value>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="452" id="452" name="wait" comment="" source="422" target="423">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="453" id="453">
+                  <guard stringRepresentation="time &lt; 20 &amp;&amp; Robot2InputInBehavior != SendMessage( ) || time >= 50 &amp;&amp; time &lt; 70 &amp;&amp; Robot2InputInBehavior != SendMessage( )">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Or"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="And"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                          <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="LowerThan"/>
+                          <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                          <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="20"/>
+                        </arguments>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                          <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="NotEqual"/>
+                          <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Robot2InputInBehavior"/>
+                          <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                            <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="584" id="584" name="SendMessage"/>
+                          </arguments>
+                        </arguments>
+                      </arguments>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="And"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                          <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="And"/>
+                          <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                            <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="GreaterEqual"/>
+                            <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                            <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="50"/>
+                          </arguments>
+                          <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                            <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="LowerThan"/>
+                            <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                            <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="70"/>
+                          </arguments>
+                        </arguments>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                          <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="NotEqual"/>
+                          <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Robot2InputInBehavior"/>
+                          <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                            <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="585" id="585" name="SendMessage"/>
+                          </arguments>
+                        </arguments>
+                      </arguments>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="time = time + 1">
+                    <variable identifier="time"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                    </value>
+                  </actions>
+                  <actions stringRepresentation="Robot2StateOutput = Waiting( )">
+                    <variable identifier="Robot2StateOutput"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="482" id="482" name="Waiting"/>
+                    </value>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points">
+                  <points x="333" y="28"/>
+                </layoutData>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="456" id="456" name="WaitToRecieve" comment="" source="424" target="440">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="457" id="457">
+                  <guard stringRepresentation="Robot2InputInBehavior == SendMessage( )">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Robot2InputInBehavior"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="486" id="486" name="SendMessage"/>
+                      </arguments>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Robot2StateOutput = RecieveMessage( )">
+                    <variable identifier="Robot2StateOutput"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="555" id="555" name="RecieveMessage"/>
+                    </value>
+                  </actions>
+                  <actions stringRepresentation="recieveTime = 3">
+                    <variable identifier="recieveTime"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="3"/>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="460" id="460" name="RecieveToWait" comment="" source="441" target="425">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="461" id="461">
+                  <guard stringRepresentation="recieveTime == 0">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="recieveTime"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Robot2StateOutput = Waiting( )">
+                    <variable identifier="Robot2StateOutput"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="588" id="588" name="Waiting"/>
+                    </value>
+                  </actions>
+                  <actions stringRepresentation="message = Robot2OutputInInput">
+                    <variable identifier="message"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Robot2OutputInInput"/>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="463" id="463" name="WaitingtoWorking" comment="" source="426" target="434">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="464" id="464">
+                  <guard stringRepresentation="time == 20 &amp;&amp; Robot2InputInBehavior != SendMessage( )">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="And"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="20"/>
+                      </arguments>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="NotEqual"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Robot2InputInBehavior"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                          <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="488" id="488" name="SendMessage"/>
+                        </arguments>
+                      </arguments>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Robot2StateOutput = Working( )">
+                    <variable identifier="Robot2StateOutput"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="556" id="556" name="Working"/>
+                    </value>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="467" id="467" name="work" comment="" source="435" target="436">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="468" id="468">
+                  <guard stringRepresentation="time &lt; 50">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="LowerThan"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="50"/>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="time = time +1">
+                    <variable identifier="time"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                    </value>
+                  </actions>
+                  <actions stringRepresentation="Robot2StateOutput = Working( )">
+                    <variable identifier="Robot2StateOutput"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="489" id="489" name="Working"/>
+                    </value>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points">
+                  <points x="182" y="470"/>
+                </layoutData>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="470" id="470" name="recieve" comment="" source="442" target="443">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="471" id="471">
+                  <guard stringRepresentation="recieveTime > 0">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="GreaterThan"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="recieveTime"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="time = time + 1">
+                    <variable identifier="time"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                    </value>
+                  </actions>
+                  <actions stringRepresentation="Robot2StateOutput = RecieveMessage( )">
+                    <variable identifier="Robot2StateOutput"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="476" id="476" name="RecieveMessage"/>
+                    </value>
+                  </actions>
+                  <actions stringRepresentation="recieveTime = recieveTime - 1">
+                    <variable identifier="recieveTime"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Subtract"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="recieveTime"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                    </value>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points">
+                  <points x="600" y="27"/>
+                </layoutData>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="542" id="542" name="try" comment="" source="540" target="541">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="543" id="543">
+                  <guard stringRepresentation="Robot2InputInBehavior == Waiting( )">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Robot2InputInBehavior"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="586" id="586" name="Waiting"/>
+                      </arguments>
+                    </expression>
+                  </guard>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points">
+                  <points x="667" y="263"/>
+                </layoutData>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="550" id="550" name="SendMessageToWaiting" comment="this robot send a message to robot1 with number 42" source="548" target="549">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="551" id="551">
+                  <guard stringRepresentation="Robot2InputInBehavior == Waiting( )">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Robot2InputInBehavior"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:UserdefinedFunction" xmi:id="552" id="552" name="Waiting"/>
+                      </arguments>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Robot2OutputInBehavior = 42">
+                    <variable identifier="Robot2OutputInBehavior"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="42"/>
+                  </actions>
+                  <actions stringRepresentation="time = 0">
+                    <variable identifier="time"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="580" id="580" name="WaitToSend" comment="" source="578" target="579">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="581" id="581">
+                  <guard stringRepresentation="time == 70">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="time"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="70"/>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="time = 0">
+                    <variable identifier="time"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points">
+                  <points x="335" y="360"/>
+                </layoutData>
+              </connections>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            </containedElements>
+            <dataStateVariables xmi:id="473" id="473">
+              <variable identifier="time"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+              <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            </dataStateVariables>
+            <dataStateVariables xmi:id="474" id="474">
+              <specifications xsi:type="org-fortiss-af3-bounds:VariableBoundsSpecification" xmi:id="475" id="475" upperBound="254" lowerBound="-255"/>
+              <variable identifier="recieveTime"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:IntConst" value="3"/>
+              <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            </dataStateVariables>
+            <dataStateVariables xmi:id="587" id="587">
+              <variable identifier="message"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+              <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            </dataStateVariables>
+          </specifications>
+          <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="72" id="72" name="Robot2OutputInInput" comment="" incoming="79">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="73" id="73">
+              <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <specifications xsi:type="org-fortiss-af3-bounds:VariableBoundsSpecification" xmi:id="76" id="76" upperBound="254" lowerBound="-255"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="36" orientation="WEST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="74" id="74" name="Robot2OutputInBehavior" comment="" outgoing="78">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="75" id="75">
+              <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <specifications xsi:type="org-fortiss-af3-bounds:VariableBoundsSpecification" xmi:id="77" id="77" upperBound="254" lowerBound="-255"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="108" orientation="WEST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="303" id="303" name="Robot2InputInBehavior" comment="" incoming="305">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="304" id="304">
+              <type xsi:type="org-fortiss-af3-expression-types:TDefinedType" name="RobotState" def="27"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="12" orientation="WEST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="308" id="308" name="Robot2StateOutput" comment="" outgoing="310">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="309" id="309">
+              <type xsi:type="org-fortiss-af3-expression-types:TDefinedType" name="RobotState" def="27"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="84" orientation="WEST"/>
+          </connectors>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="264" y="60"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="193" height="157"/>
+        </containedElements>
+        <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="14" id="14"/>
+        <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="15" id="15"/>
+        <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="16" id="16"/>
+        <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="17" id="17"/>
+        <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="78" id="78" name="" comment="" source="74" target="44">
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+        </connections>
+        <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="79" id="79" name="" comment="" source="31" target="72">
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+        </connections>
+        <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="305" id="305" name="" comment="" source="275" target="303">
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+        </connections>
+        <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="310" id="310" name="" comment="" source="308" target="282">
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+        </connections>
+        <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="31" id="31" name="InputRobot2" comment="" incoming="53" outgoing="79">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="32" id="32">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <specifications xsi:type="org-fortiss-af3-bounds:VariableBoundsSpecification" xmi:id="36" id="36" upperBound="254" lowerBound="-255"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="36" y="96"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="48" orientation="WEST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="44" id="44" name="Robot2Output" comment="" incoming="78" outgoing="52">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="45" id="45">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <specifications xsi:type="org-fortiss-af3-bounds:VariableBoundsSpecification" xmi:id="46" id="46" upperBound="254" lowerBound="-255"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="36" y="168"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="72" orientation="WEST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="275" id="275" name="Robot1StateInput" comment="" incoming="277" outgoing="305">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="276" id="276">
+            <type xsi:type="org-fortiss-af3-expression-types:TDefinedType" name="RobotState" def="27"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <specifications xsi:type="org-fortiss-af3-bounds:VariableBoundsSpecification" xmi:id="288" id="288" upperBound="254" lowerBound="-255"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="36" y="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="120" orientation="WEST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="282" id="282" name="Robto2StateOutput" comment="" incoming="310" outgoing="286">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="283" id="283">
+            <type xsi:type="org-fortiss-af3-expression-types:TDefinedType" name="RobotState" def="27"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <specifications xsi:type="org-fortiss-af3-bounds:VariableBoundsSpecification" xmi:id="289" id="289" upperBound="254" lowerBound="-255"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="36" y="144"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="96" orientation="WEST"/>
+        </connectors>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="300" y="24"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="265" height="205"/>
+      </containedElements>
+      <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="6" id="6"/>
+      <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="7" id="7"/>
+      <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="18" id="18"/>
+      <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="19" id="19"/>
+      <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="52" id="52" name="" comment="" source="44" target="49">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+      </connections>
+      <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="53" id="53" name="" comment="" source="41" target="31">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+      </connections>
+      <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="277" id="277" name="" comment="" source="273" target="275">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+      </connections>
+      <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="286" id="286" name="" comment="" source="282" target="284">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+      </connections>
+      <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+      <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+    </containedElements>
+    <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="20" id="20"/>
+  </rootElements>
+  <rootElements xsi:type="org-fortiss-af3-expression:DataDictionary" xmi:id="21" id="21">
+    <typeDefinitions xsi:type="org-fortiss-af3-expression-definitions:Enumeration" xmi:id="27" id="27" name="RobotState">
+      <members xmi:id="28" id="28" name="Waiting"/>
+      <members xmi:id="29" id="29" name="Working"/>
+      <members xmi:id="30" id="30" name="SendMessage"/>
+      <members xmi:id="315" id="315" name="RecieveMessage"/>
+    </typeDefinitions>
+  </rootElements>
+  <rootElements xsi:type="org-fortiss-af3-mira:Analysis" xmi:id="23" id="23">
+    <containedElements xsi:type="org-fortiss-af3-mira-glossary:Glossary" xmi:id="80" id="80" name="Glossary" comment="">
+      <containedElements xsi:type="org-fortiss-af3-mira-glossary:GlossaryEntry" xmi:id="81" id="81" name="Robot" comment="" definition="Robots can send messages to each other. Robot can Waiting, Workig and SendMessage. When the robot is working and the other robot is sending a message,other robot must wait until the first robot will be waiting."/>
+      <containedElements xsi:type="org-fortiss-af3-mira-glossary:GlossaryEntry" xmi:id="142" id="142" name="Message" comment="" definition="This is a int data from a Robot to other Robot."/>
+      <containedElements xsi:type="org-fortiss-af3-mira-glossary:GlossaryEntry" xmi:id="143" id="143" name="Waiting" comment="" definition="One of Robot states. The robot is idle and free. Robot can recieve messages."/>
+      <containedElements xsi:type="org-fortiss-af3-mira-glossary:GlossaryEntry" xmi:id="639" id="639" name="Robot1" comment="" definition="One of robots. This is a slow robot."/>
+      <containedElements xsi:type="org-fortiss-af3-mira-glossary:GlossaryEntry" xmi:id="641" id="641" name="Robot2" comment="" definition="One of robots. This is a fast robot."/>
+    </containedElements>
+    <containedElements xsi:type="org-fortiss-af3-mira:RequirementsContainer" xmi:id="146" id="146" name="Requirements" comment="">
+      <containedElements xsi:type="org-fortiss-af3-mira:RequirementsPackage" xmi:id="147" id="147" name="Requirements Package" comment="">
+        <containedElements xsi:type="org-fortiss-af3-mira:Requirement" xmi:id="149" id="149" name="Robot waiting contraint" description="Robots musn't waiting forever. Robot can recieve message only in waiting state." sources="System architect" status="Analyzed" reqId="1">
+          <specifications xsi:type="org-fortiss-af3-mira-verification:CheckList" xmi:id="150" id="150" name="Discovery Phase" comment="Check list for discovery Phase">
+            <items xmi:id="151" id="151" name="Requirement is relevant" comment="TODO" category="E3.1"/>
+            <items xmi:id="152" id="152" name="Requirement description is correct" comment="TODO" category="E4.1"/>
+            <items xmi:id="153" id="153" name="Consistent wording -- check with glossary" comment="TODO" category="E6.1"/>
+          </specifications>
+          <specifications xsi:type="org-fortiss-af3-mira-verification:CheckList" xmi:id="154" id="154" name="Detailed Modeling Phase" comment="Check list for conceptual modeling phase">
+            <items xmi:id="155" id="155" name="Consistent wording -- check with glossary" comment="TODO" category="E6.1"/>
+          </specifications>
+          <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="156" id="156"/>
+          <connectors xsi:type="org-fortiss-af3-mira:RequirementConnector"/>
+        </containedElements>
+        <containedElements xsi:type="org-fortiss-af3-mira:Requirement" xmi:id="590" id="590" name="System timing constraint" description="Behavior of robots depends the time." sources="System architect" reqId="2">
+          <specifications xsi:type="org-fortiss-af3-mira-verification:CheckList" xmi:id="591" id="591" name="Discovery Phase" comment="Check list for discovery Phase">
+            <items xmi:id="592" id="592" name="Requirement is relevant" comment="TODO" category="E3.1"/>
+            <items xmi:id="593" id="593" name="Requirement description is correct" comment="TODO" category="E4.1"/>
+            <items xmi:id="594" id="594" name="Consistent wording -- check with glossary" comment="TODO" category="E6.1"/>
+          </specifications>
+          <specifications xsi:type="org-fortiss-af3-mira-verification:CheckList" xmi:id="595" id="595" name="Detailed Modeling Phase" comment="Check list for conceptual modeling phase">
+            <items xmi:id="596" id="596" name="Consistent wording -- check with glossary" comment="TODO" category="E6.1"/>
+          </specifications>
+          <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="597" id="597"/>
+          <connectors xsi:type="org-fortiss-af3-mira:RequirementConnector"/>
+        </containedElements>
+        <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="157" id="157"/>
+      </containedElements>
+      <containedElements xsi:type="org-fortiss-af3-mira-usecase:UseCase" xmi:id="618" id="618" priority="Normal - Satisfier" reqId="Robot2 send a message to Robot1">
+        <containedElements xsi:type="org-fortiss-af3-mira-usecase:Scenario" xmi:id="742" id="742" name="succes scenario" comment="" successScenario="true">
+          <containedElements xsi:type="org-fortiss-af3-mira-usecase:ScenarioStep" actor="756" action="&lt;no action>"/>
+        </containedElements>
+        <containedElements xsi:type="org-fortiss-af3-mira-usecase:Scenario" xmi:id="743" id="743" name="Failure scenario" comment=""/>
+        <containedElements xsi:type="org-fortiss-af3-msc:MSCSpecification" xmi:id="744" id="744" name="MSC Specification">
+          <topEntity xmi:id="745" id="745" name="MSC Specification" comment="MSC Specification">
+            <containedElements xsi:type="org-fortiss-af3-msc:MSCObject" xmi:id="749" id="749" name="Robot2" comment="">
+              <containedElements xsi:type="org-fortiss-af3-msc:MSCLoopOperator" xmi:id="787" id="787" name="Loop" comment="">
+                <specifications xsi:type="org-fortiss-af3-msc:MSCLoopSpecification" xmi:id="788" id="788">
+                  <loopStart xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                  <loopEnd xsi:type="org-fortiss-af3-expression-terms:IntConst" value="10"/>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="360" y="180"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="36"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-msc:MSCLoopOperator" xmi:id="785" id="785" name="Loop" comment="">
+                <specifications xsi:type="org-fortiss-af3-msc:MSCLoopSpecification" xmi:id="786" id="786">
+                  <loopStart xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                  <loopEnd xsi:type="org-fortiss-af3-expression-terms:IntConst" value="10"/>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="348" y="132"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="36"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-msc:MSCLoopOperator" xmi:id="783" id="783" name="Loop" comment="">
+                <specifications xsi:type="org-fortiss-af3-msc:MSCLoopSpecification" xmi:id="784" id="784">
+                  <loopStart xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                  <loopEnd xsi:type="org-fortiss-af3-expression-terms:IntConst" value="10"/>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="360" y="132"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="36"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-msc:MSCConditionalOperator" xmi:id="757" id="757" name="Condition" comment="">
+                <specifications xsi:type="org-fortiss-af3-msc:MSCConditionalSpecification" xmi:id="758" id="758"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="204" y="108"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="180" height="36"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-msc:MSCConditionalOperator" xmi:id="759" id="759" name="Condition" comment="">
+                <specifications xsi:type="org-fortiss-af3-msc:MSCConditionalSpecification" xmi:id="760" id="760"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="180" y="36"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="180" height="36"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-msc:MSCConditionalOperator" xmi:id="777" id="777" name="Condition" comment="">
+                <specifications xsi:type="org-fortiss-af3-msc:MSCConditionalSpecification" xmi:id="778" id="778"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="336" y="108"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="180" height="36"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-msc:MSCConditionalOperator" xmi:id="779" id="779" name="Condition" comment="">
+                <specifications xsi:type="org-fortiss-af3-msc:MSCConditionalSpecification" xmi:id="780" id="780"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="360" y="120"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="180" height="36"/>
+              </containedElements>
+              <specifications xsi:type="org-fortiss-af3-msc:MSCObjectSpecification" xmi:id="750" id="750">
+                <modelElementReference xsi:type="org-fortiss-af3-msc:ComponentReference" reference="13"/>
+              </specifications>
+              <connectors xsi:type="org-fortiss-af3-msc:MessageExitConnector" xmi:id="769" id="769" name="" comment="" outgoing="775">
+                <specifications xsi:type="org-fortiss-af3-msc:MSCTimeSpecification" xmi:id="770" id="770"/>
+                <specifications xsi:type="org-fortiss-af3-msc:MSCPortSpecification" xmi:id="771" id="771">
+                  <modelElementReference xsi:type="org-fortiss-af3-msc:ComponentReference"/>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="36" orientation="WEST"/>
+              </connectors>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="312" y="66"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="411"/>
+            </containedElements>
+            <containedElements xsi:type="org-fortiss-af3-msc:MSCObject" xmi:id="747" id="747" name="Robot1" comment="">
+              <containedElements xsi:type="org-fortiss-af3-msc:MSCConditionalOperator" xmi:id="781" id="781" name="Condition" comment="">
+                <specifications xsi:type="org-fortiss-af3-msc:MSCConditionalSpecification" xmi:id="782" id="782"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="72" y="132"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="180" height="36"/>
+              </containedElements>
+              <specifications xsi:type="org-fortiss-af3-msc:MSCObjectSpecification" xmi:id="748" id="748">
+                <modelElementReference xsi:type="org-fortiss-af3-msc:ComponentReference" reference="8"/>
+              </specifications>
+              <connectors xsi:type="org-fortiss-af3-msc:MessageEntryConnector" xmi:id="772" id="772" name="" comment="" incoming="775">
+                <specifications xsi:type="org-fortiss-af3-msc:MSCTimeSpecification" xmi:id="773" id="773"/>
+                <specifications xsi:type="org-fortiss-af3-msc:MSCPortSpecification" xmi:id="774" id="774">
+                  <modelElementReference xsi:type="org-fortiss-af3-msc:ComponentReference"/>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="36" orientation="WEST"/>
+              </connectors>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="36" y="64"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="411"/>
+            </containedElements>
+            <specifications xsi:type="org-fortiss-af3-msc:MSCObjectSpecification" xmi:id="746" id="746">
+              <modelElementReference xsi:type="org-fortiss-af3-msc:ComponentReference"/>
+            </specifications>
+            <connections xsi:type="org-fortiss-af3-msc:Message" xmi:id="775" id="775" name="Message" comment="" source="769" target="772">
+              <specifications xsi:type="org-fortiss-af3-msc:MessageSpecification" xmi:id="776" id="776"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+            </connections>
+          </topEntity>
+        </containedElements>
+        <specifications xsi:type="org-fortiss-af3-mira-verification:CheckList" xmi:id="619" id="619" name="Discovery Phase" comment="Check list for discovery Phase">
+          <items xmi:id="620" id="620" name="Use Case is relevant" comment="TODO" category="E3.1"/>
+          <items xmi:id="621" id="621" name="Use Case description is correct" comment="TODO" category="E4.1"/>
+          <items xmi:id="622" id="622" name="Actors are complete" comment="TODO" category="E1.2"/>
+          <items xmi:id="623" id="623" name="Associations to actors are correct" comment="TODO" category="E4.2"/>
+          <items xmi:id="624" id="624" name="Consistent wording -- check with glossary" comment="TODO" category="E6.1"/>
+        </specifications>
+        <specifications xsi:type="org-fortiss-af3-mira-verification:CheckList" xmi:id="625" id="625" name="Detailed Modeling Phase" comment="Check list for conceptual modeling phase">
+          <items xmi:id="626" id="626" name="Alternative scenarios are complete--experts view" comment="TODO" category="E1.6"/>
+          <items xmi:id="627" id="627" name="All alternative scenarios of the Use Case are described" comment="TODO" category="E1.7"/>
+          <items xmi:id="628" id="628" name="Completeness of course of actions" comment="TODO" category="E1.9"/>
+          <items xmi:id="629" id="629" name="Alternative scenarios are consistently described" comment="TODO" category="E1.10"/>
+          <items xmi:id="630" id="630" name="Consistent wording -- check with glossary" comment="TODO" category="E6.1"/>
+        </specifications>
+        <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="640" id="640"/>
+        <connectors xsi:type="org-fortiss-af3-mira:RequirementConnector"/>
+        <scope xmi:id="631" id="631"/>
+        <actor xmi:id="632" id="632" name="&lt;no actor>" comment="dummy actor"/>
+        <actor xmi:id="755" id="755" name="Robot1" comment=""/>
+        <actor xmi:id="756" id="756" name="Robot2" comment=""/>
+        <trigger xmi:id="633" id="633"/>
+        <precondition xsi:type="org-fortiss-af3-mira-usecase:ConditionBase" xmi:id="634" id="634"/>
+        <minimalGuarantee xsi:type="org-fortiss-af3-mira-usecase:ConditionBase" xmi:id="635" id="635"/>
+        <successGuarantee xsi:type="org-fortiss-af3-mira-usecase:ConditionBase" xmi:id="636" id="636"/>
+        <inputs xmi:id="637" id="637"/>
+        <outputs xmi:id="638" id="638"/>
+      </containedElements>
+      <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="158" id="158"/>
+    </containedElements>
+    <containedElements xsi:type="org-fortiss-af3-mira-requirementSource:RequirementSource" xmi:id="598" id="598" name="Requirement Sources" comment="">
+      <containedElements xsi:type="org-fortiss-af3-mira-requirementSource:Stakeholder" xmi:id="599" id="599" name="System architect" comment="" definition="Peter the architect of the system."/>
+      <containedElements xsi:type="org-fortiss-af3-mira-requirementSource:Stakeholder" xmi:id="642" id="642" name="consultants" comment="" definition="My consultants : Oszkár Semeráth and Nagy András Szabolcs."/>
+      <containedElements xsi:type="org-fortiss-af3-mira-requirementSource:ExternalSystem" xmi:id="753" id="753" name="Robot2" comment="" definition=""/>
+      <containedElements xsi:type="org-fortiss-af3-mira-requirementSource:ExternalSystem" xmi:id="754" id="754" name="Robot1" comment="" definition=""/>
+    </containedElements>
+    <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="159" id="159"/>
+    <requirementRelationStatus xmi:id="24" id="24" name="New" comment=""/>
+    <requirementRelationStatus xmi:id="25" id="25" name="In Analysis" comment=""/>
+    <requirementRelationStatus xmi:id="26" id="26" name="Analyzed" comment=""/>
+  </rootElements>
+  <rootElements xsi:type="org-fortiss-af3-project-execution:ExecutionConfigurationStore" xmi:id="553" id="553">
+    <configurations xmi:id="554" id="554" name="Execonf" comment="" idReference="4"/>
+  </rootElements>
+</org-fortiss-af3-project:FileProject>
